@@ -2,7 +2,7 @@ package br.com.caelum.model;
 
 public class Conta {
 
-//public abstract class Conta {
+	// public abstract class Conta {
 
 	private String titular;
 	private double saldo;
@@ -20,7 +20,7 @@ public class Conta {
 	 * Qnd declaramos um atributo como static, ele passa a não ser mais um atributo
 	 * de cada objeto, e, sim um atributo da classe, a informação fica guardada pela
 	 * a classe, não é mais individual para cada objeto
-	*/
+	 */
 	private static int totalDeContas;
 
 	public double getSaldo() {
@@ -73,22 +73,28 @@ public class Conta {
 		this.saldo += quantidade;
 	}
 
-	public boolean saca(double quantidade) {
-		if (quantidade > this.saldo + this.limite) {
-			System.out.println(
-					"Seu Limite para sacar é inferior ao seu saldo! Por gentileza faça um novo deposito para minha conta! :D");
-			return false;
+	public void saca(double valor) {
+		if (this.saldo < valor) {
+			throw new SaldoInsuficienteException("Saldo Insuficiente, tente um valor menor");
+			//throw new RuntimeException();
 		} else {
-			this.saldo = this.saldo - quantidade;
-			return true;
+			this.saldo -= valor;
 		}
 	}
 
 	public void atualiza(double taxa) {
 		this.saldo += this.saldo * taxa;
 	}
-	
-	/*public abstract void atualiza(double taxa);*/
+
+	/*
+	 * public boolean saca(double quantidade) { if (quantidade > this.saldo +
+	 * this.limite) { System.out.println(
+	 * "Seu Limite para sacar é inferior ao seu saldo! Por gentileza faça um novo deposito para minha conta! :D"
+	 * ); return false; } else { this.saldo = this.saldo - quantidade; return true;
+	 * } }
+	 */
+
+	/* public abstract void atualiza(double taxa); */
 
 	/*
 	 * public boolean sacaMoney(double valor) { if(this.saldo < valor) { return

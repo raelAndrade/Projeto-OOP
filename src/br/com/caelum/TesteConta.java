@@ -1,20 +1,39 @@
 package br.com.caelum;
 
-import br.com.caelum.model.Conta;
+import br.com.caelum.model.ContaCorrente;
+import br.com.caelum.model.ContaPoupanca;
+import br.com.caelum.model.Contas;
+import br.com.caelum.model.SaldoInsuficienteException;
 
 public class TesteConta {
 
 	public static void main(String[] args) {
 		
+		Contas cc = new ContaCorrente();
+		cc.deposita(100);
+		
+		Contas cp = new ContaPoupanca();
+		cc.deposita(100);
+		
+		// Sacando das contas
+		try {
+			cc.saca(50);
+			//System.out.println("Consegui sacar da conta corrente!");
+			cc.saca(50);
+			//System.out.println("Consegui sacar da conta poupança!");
+		}catch(SaldoInsuficienteException e) {
+			System.out.println(e.getMessage());
+		}				
+				
 		//Contas c = new ContaCorrente();
 		//Tributavel t = new ContaCorrente();
 		
-		Conta minhaConta = new Conta();
+		/*Conta minhaConta = new Conta();
 		minhaConta.deposita(100);
 		minhaConta.setLimite(100);
 		if(!minhaConta.saca(1000)) {
 			System.out.println("Não saqueeeeiii! :( ");
-		}
+		}*/
 				
 		/*Conta c1 = new Conta();
 		Data data = new Data();
