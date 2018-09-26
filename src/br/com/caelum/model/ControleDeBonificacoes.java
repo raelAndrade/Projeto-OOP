@@ -12,5 +12,10 @@ public class ControleDeBonificacoes {
 	public double getTotalDeBonificacoes() {
 		return this.totalDeBonificacoes;
 	}
+	
+	public void registra(Funcionario f) {
+		System.out.println("Adicionando bonificação do funcionário: " + f);
+		this.totalDeBonificacoes += f.getBonificacao();
+	}
 
 }

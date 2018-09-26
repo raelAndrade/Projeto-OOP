@@ -20,9 +20,9 @@ public class TestaGerente {
 		controle.adiciona(funcionario1);
 		controle.adiciona(funcionario1);
 		
-		Funcionario funcionario2 = new Funcionario();
-		funcionario2.setSalario(1000.0);
-		controle.adiciona(funcionario2);
+		//Funcionario funcionario2 = new Funcionario();
+		//funcionario2.setSalario(1000.0);
+		//controle.adiciona(funcionario2);
 		
 		System.out.println(controle.getTotalDeBonificacoes());
 		

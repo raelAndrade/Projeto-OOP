@@ -1,12 +1,21 @@
 package br.com.caelum;
 
 import br.com.caelum.model.Conta;
-import br.com.caelum.model.Data;
 
 public class TesteConta {
 
 	public static void main(String[] args) {
 		
+		//Contas c = new ContaCorrente();
+		//Tributavel t = new ContaCorrente();
+		
+		Conta minhaConta = new Conta();
+		minhaConta.deposita(100);
+		minhaConta.setLimite(100);
+		if(!minhaConta.saca(1000)) {
+			System.out.println("Não saqueeeeiii! :( ");
+		}
+				
 		/*Conta c1 = new Conta();
 		Data data = new Data();
 		

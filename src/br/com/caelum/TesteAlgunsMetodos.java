@@ -4,6 +4,9 @@ import br.com.caelum.model.Conta;
 
 public class TesteAlgunsMetodos {
 
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		
 		Conta c = new Conta();
