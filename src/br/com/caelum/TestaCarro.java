@@ -1,6 +1,6 @@
 package br.com.caelum;
 
-import br.com.caelum.model.Carro;
+import br.com.caelum.carro.Carro;
 
 public class TestaCarro {
 

@@ -1,8 +1,8 @@
 package br.com.caelum;
 
-import br.com.caelum.model.ControleDeBonificacoes;
-import br.com.caelum.model.Funcionario;
-import br.com.caelum.model.Gerente;
+import br.com.caelum.banco.conta.ControleDeBonificacoes;
+import br.com.caelum.faculdade.Funcionario;
+import br.com.caelum.faculdade.Gerente;
 
 public class TestaGerente {
 

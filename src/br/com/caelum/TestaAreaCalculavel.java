@@ -1,9 +1,9 @@
 package br.com.caelum;
 
-import br.com.caelum.model.AreaCalculavel;
-import br.com.caelum.model.Circulo;
-import br.com.caelum.model.Quadrado;
-import br.com.caelum.model.Retangulo;
+import br.com.caelum.area.AreaCalculavel;
+import br.com.caelum.area.Circulo;
+import br.com.caelum.area.Quadrado;
+import br.com.caelum.area.Retangulo;
 
 public class TestaAreaCalculavel {
 

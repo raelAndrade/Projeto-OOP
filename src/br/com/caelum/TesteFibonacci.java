@@ -1,6 +1,6 @@
 package br.com.caelum;
 
-import br.com.caelum.model.Fibonacci;
+import br.com.caelum.area.Fibonacci;
 
 public class TesteFibonacci {
 

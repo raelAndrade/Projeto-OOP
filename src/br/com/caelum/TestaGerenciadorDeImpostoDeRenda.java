@@ -1,8 +1,8 @@
 package br.com.caelum;
 
-import br.com.caelum.model.ContaCorrente;
-import br.com.caelum.model.GerenciadorDeImpostoDeRenda;
-import br.com.caelum.model.SeguroDeVida;
+import br.com.caelum.banco.conta.ContaCorrente;
+import br.com.caelum.banco.conta.GerenciadorDeImpostoDeRenda;
+import br.com.caelum.banco.conta.SeguroDeVida;
 
 public class TestaGerenciadorDeImpostoDeRenda {
 	

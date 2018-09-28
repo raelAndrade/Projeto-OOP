@@ -1,9 +1,9 @@
 package br.com.caelum;
 
-import br.com.caelum.model.ContaCorrente;
-import br.com.caelum.model.ContaPoupanca;
-import br.com.caelum.model.Contas;
-import br.com.caelum.model.SaldoInsuficienteException;
+import br.com.caelum.banco.conta.ContaCorrente;
+import br.com.caelum.banco.conta.ContaPoupanca;
+import br.com.caelum.banco.conta.Contas;
+import br.com.caelum.exception.SaldoInsuficienteException;
 
 public class TesteConta {
 
@@ -13,7 +13,7 @@ public class TesteConta {
 		cc.deposita(100);
 		
 		Contas cp = new ContaPoupanca();
-		cc.deposita(100);
+		cp.deposita(100);
 		
 		// Sacando das contas
 		try {

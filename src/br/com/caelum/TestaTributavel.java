@@ -1,7 +1,7 @@
 package br.com.caelum;
 
-import br.com.caelum.model.ContaCorrente;
-import br.com.caelum.model.Tributavel;
+import br.com.caelum.banco.conta.ContaCorrente;
+import br.com.caelum.banco.conta.Tributavel;
 
 public class TestaTributavel {
 	

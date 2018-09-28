@@ -1,6 +1,6 @@
 package br.com.caelum;
 
-import br.com.caelum.model.Conta;
+import br.com.caelum.banco.conta.Conta;
 
 public class TesteAlgunsMetodos {
 
