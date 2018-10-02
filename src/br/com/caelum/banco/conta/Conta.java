@@ -70,6 +70,41 @@ public class Conta {
 		this(titular);// chama outro construtor que foi declarado acima
 		this.numero = numero;
 	}
+	
+	public Conta (double saldo) {
+		this.saldo = saldo;
+	}
+	
+	// Método toString
+	public String toString() {
+		return "Uma conta com valor: " + this.saldo;
+	}
+	
+	/**
+	 * O equals recebe um Object como argumento e deve vericar se ele mesmo é igual ao Object 
+	 * recebido para retornar um boolean. Se você não reescrever esse método, o comportamento 
+	 * herdado é fazer um == com o objeto recebido como argumento.
+	 * 
+	 * Seria correto, então, reescrever este método, fazendo as comparações dos atributos, e o 
+	 * usuário passaria a invocar equals em vez de comparar com ==
+	 * 
+	 * Pelo contrato definido pela classe Object devemos retornar false também no caso do objeto
+	 * passado não ser de tipo compatível com a sua classe. Então antes de fazer o casting devemos
+	 * vericar isso, e para tal usamos a palavra chave instanceof, ou teríamos uma exception sendo
+	 * lançada.
+	 */
+	
+	public boolean equals(Object object) {		
+		if (!(object instanceof Conta)) 
+			return false;
+		Conta outraConta = (Conta) object;
+		return this.saldo == outraConta.saldo;
+	}
+	
+	/**
+	 * O método hashCode() anda de mãos dadas com o método equals() e é de fundamental entendimento 
+	 * no caso de você utilizar suas classes com estruturas de dados que usam tabelas de espalhamento.	 * 
+	 */
 
 	// Método
 	
