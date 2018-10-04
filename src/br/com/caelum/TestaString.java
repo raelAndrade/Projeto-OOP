@@ -44,6 +44,57 @@ public class TestaString {
 		} else {
 		  System.out.println("A str1 e str2 são iguais");
 		}
+		
+		String palavra = "fj11";
+		String outro = palavra.toUpperCase();
+		System.out.println(outro);
+		
+		String palavra1 = "fj11";
+		palavra1 = palavra1.toUpperCase();
+		System.out.println(palavra1);
+		
+		String palavra2 = "fj11";
+		palavra2 = palavra2.toUpperCase();
+		palavra2 = palavra2.replace("1", "2");
+		System.out.println(palavra2);
+		
+		String palavra3 = "fj11";
+		palavra3 = palavra3.toUpperCase().replace("1", "2");
+		System.out.println(palavra3);
+		
+		String s = "fj11";
+		s = s.replaceAll("1", "2");
+		System.out.println(s);
+		
+		String sb = "Socorram-me, subi no ônibus em Marrocos";
+		StringBuffer sb1 = new StringBuffer(sb);
+		sb1.reverse();
+		System.out.println(sb1);
+		
+		StringBuffer sb2 = new StringBuffer(sb);
+		System.out.println(sb);
+		
+		/**
+		 * O método charAt(i), retorna o caractere existente na posição i da String
+		 * 
+		 * O método length retorna o número de caracteres na mesma
+		 * 
+		 * O método substring que recebe um int e devolve a SubString a partir da posição passada por aquele int
+		 * 
+		 * O indexOf recebe um char ou uma String e devolve o índice em que aparece pela primeira vez na 
+		 * 	String principal (há também o lastIndexOf que devolve o índice da última ocorrência)
+		 * 
+		 * O toUpperCase e o toLowerCase devolvem uma nova String toda em maiúscula e toda em minúscula, respectivamente.
+		 * 
+		 * O método isEmpty, que devolve true se a String for vazia ou false caso contrário.
+		 * 
+		 * Alguns métodos úteis para buscas são o contains e o matches.
+		 * 
+		 * No caso de você trabalhar muito com a manipulação de uma mesma String (por exemplo, dentro de um laço), 
+		 * 	o ideal é utilizar a classe StringBuffer. A classe StringBuffer representa uma sequência de caracteres. 
+		 * 	Diferentemente da String, ela é mutável, e não possui aquele pool.
+		 *  
+		 */
 
 	}
 

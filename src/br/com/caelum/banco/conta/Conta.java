@@ -4,8 +4,7 @@ import br.com.caelum.exception.SaldoInsuficienteException;
 import br.com.caelum.exception.ValorInvalidoException;
 
 public class Conta {
-
-	// public abstract class Conta {
+// public abstract class Conta {
 
 	private String titular;
 	private double saldo;
@@ -94,11 +93,16 @@ public class Conta {
 	 * lançada.
 	 */
 	
-	public boolean equals(Object object) {		
+	/*public boolean equals(Object object) {		
 		if (!(object instanceof Conta)) 
 			return false;
 		Conta outraConta = (Conta) object;
 		return this.saldo == outraConta.saldo;
+	}*/
+	
+	public boolean equals(Object obj) {
+		Conta outraConta = (Conta) obj;
+		return this.numero == outraConta.numero;
 	}
 	
 	/**

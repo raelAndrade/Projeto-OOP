@@ -1,6 +1,8 @@
 package br.com.caelum;
 
 import br.com.caelum.banco.conta.Conta;
+import br.com.caelum.banco.conta.ContaCorrente;
+import br.com.caelum.banco.conta.ContaPoupanca;
 import br.com.caelum.javalangobject.GuardadorDeObjetos;
 
 /**
@@ -13,6 +15,11 @@ public class TestaGuardadorDeObjetos {
 	public static void main(String[] args) {
 		
 		GuardadorDeObjetos guardador = new GuardadorDeObjetos();
+		
+		ContaCorrente cc = new ContaCorrente();
+		guardador.adicionaObjeto(cc);
+		
+		ContaPoupanca cp = (ContaPoupanca) guardador.pegaObjeto(0);
 		
 		Conta conta = new Conta(100);
 		//System.out.println(conta.toString());
