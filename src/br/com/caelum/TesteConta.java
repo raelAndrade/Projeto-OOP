@@ -9,12 +9,12 @@ public class TesteConta {
 
 	public static void main(String[] args) {
 		
-		Contas cc = new ContaCorrente();
+		Contas cc = (Contas) new ContaCorrente();
 		System.out.println(cc.toString());
 		cc.deposita(100);
 		
 		
-		Contas cp = new ContaPoupanca();
+		Contas cp = (Contas) new ContaPoupanca();
 		cp.deposita(100);
 		
 		// Sacando das contas

@@ -7,7 +7,7 @@ import br.com.caelum.exception.ValorInvalidoException;
 public class TestaDeposita {
 
 	public static void main(String[] args) {
-		Contas cp = new ContaPoupanca();
+		Contas cp = (Contas) new ContaPoupanca();
 		
 		try {
 			cp.deposita(-100);

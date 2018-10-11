@@ -9,7 +9,7 @@ public class Conta {
 	private String titular;
 	private double saldo;
 	private double limite;
-	private int numero;
+	protected int numero;
 
 	// public Cliente titular = new Cliente();
 	// public Data dataDeAbertura;
@@ -17,6 +17,18 @@ public class Conta {
 	// public String agencia;
 	// public String titularConta;
 	// public String dataDeAbertura;
+
+	public int getNumero() {
+		return numero;
+	}
+
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
 
 	/*
 	 * Qnd declaramos um atributo como static, ele passa a não ser mais um atributo
@@ -113,10 +125,15 @@ public class Conta {
 	// Método
 	
 	public void deposita(double valor) {
-		if(valor < 0) {
-			throw new ValorInvalidoException(valor);	
-		}else {
-			this.saldo += valor - 0.10;
+		synchronized (this) {
+			double novoSaldo = this.saldo + valor;
+			this.saldo = novoSaldo;
+			
+			/*if(valor < 0) {
+				throw new ValorInvalidoException(valor);	
+			}else {
+				this.saldo += valor - 0.10;
+			}*/
 		}
 	}
 	
@@ -132,9 +149,20 @@ public class Conta {
 			this.saldo -= valor;
 		}
 	}
-
+	
+	/**
+	 * A palavra chave synchronized dá essa característica a um bloco de código e recebe qual é o objeto 
+	 * que será usado como chave. A chave só é devolvida no momento em que a Thread que tinha essa chave sair 
+	 * do bloco, seja por return ou disparo de uma exceção (ou ainda na utilização do método wait()).
+	 * 
+	 * @param taxa
+	 */
 	public void atualiza(double taxa) {
-		this.saldo += this.saldo * taxa;
+		synchronized (this) {
+			double saldoAtualizado = this.saldo * (1 + taxa);
+			this.saldo = saldoAtualizado;
+			//this.saldo += this.saldo * taxa;
+		}
 	}
 
 	/*
